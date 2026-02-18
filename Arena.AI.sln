@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arena.AI.Core", "Arena.AI.Core\Arena.AI.Core.csproj", "{FAB2EF87-80A6-90AF-3988-E31A63E329BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arena.AI", "Arena.AI\Arena.AI.csproj", "{8B335B02-2EFA-0898-22F1-8597631B2362}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAB2EF87-80A6-90AF-3988-E31A63E329BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB2EF87-80A6-90AF-3988-E31A63E329BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB2EF87-80A6-90AF-3988-E31A63E329BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB2EF87-80A6-90AF-3988-E31A63E329BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B335B02-2EFA-0898-22F1-8597631B2362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B335B02-2EFA-0898-22F1-8597631B2362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B335B02-2EFA-0898-22F1-8597631B2362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B335B02-2EFA-0898-22F1-8597631B2362}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09E0CAC4-3119-4CC4-BB86-F009A3523E86}
+	EndGlobalSection
+EndGlobal
