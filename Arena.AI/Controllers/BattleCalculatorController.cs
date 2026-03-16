@@ -1,5 +1,7 @@
+using Arena.AI.Core;
 using Arena.AI.Core.Logic;
 using Arena.AI.Core.Models;
+using Arena.AI.Core.RealtimePlayers;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
 
@@ -52,6 +54,19 @@ public class BattleCalculatorController : ControllerBase
             request.BattleID, 
             TeamGenerator.GenerateTeamOfSpecificType(unitTypeA.ToString(), unitTypeA), 
             TeamGenerator.GenerateTeamOfSpecificType(unitTypeB.ToString(), unitTypeB));
+    }
+
+
+    [HttpPost("calculate-sp1-vs-sp1")]
+    public async Task<BattleResult> CalculateSp1VsSp1()
+    {
+        var rtbm = new RealtimeBattleManager(
+            new SimplePlayer1(),
+            new SimplePlayer1());
+
+        await rtbm.PlayBattleAsync();
+
+        return rtbm.GetBattleResult();
     }
 }
 
