@@ -16,5 +16,6 @@ if [[ ! -f "$ROOT_DIR/data-pipeline/config/.env" ]]; then
   cp "$ROOT_DIR/data-pipeline/config/.env.example" "$ROOT_DIR/data-pipeline/config/.env"
 fi
 
-python3 "$ROOT_DIR/data-pipeline/src/run_pipeline.py" --samples "$SAMPLES"
+cd "$ROOT_DIR"
+REPO_ROOT="$ROOT_DIR" python3 data-pipeline/src/run_pipeline.py --samples "$SAMPLES"
 

@@ -17,7 +17,10 @@ def read_env_file(env_path: Path) -> dict[str, str]:
 
 
 def get_config() -> dict[str, str]:
-    repo_root = Path(__file__).resolve().parents[2]
+    if repo_root_env := os.environ.get("REPO_ROOT"):
+        repo_root = Path(repo_root_env)
+    else:
+        repo_root = Path(__file__).resolve().parents[2]
     env_file = repo_root / "data-pipeline" / "config" / ".env"
     defaults = read_env_file(repo_root / "data-pipeline" / "config" / ".env.example")
     overrides = read_env_file(env_file)
