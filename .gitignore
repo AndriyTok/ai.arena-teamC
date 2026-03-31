@@ -385,3 +385,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# ETL local artifacts
+data-pipeline/config/.env
+.venv/
+venv/
+data/raw/*.ndjson
+data/staging/*.ndjson
+data/duckdb/*.duckdb
+data/duckdb/*.wal
+
