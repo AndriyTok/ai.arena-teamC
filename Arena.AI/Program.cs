@@ -1,3 +1,4 @@
+using Arena.AI.Services;
 using Arena.AI.Core;
 using Arena.AI.SignalR;
 
@@ -11,6 +12,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR();
 
+// Battle result persistence pipeline
+builder.Services.AddSingleton<BattleResultBuffer>();
+builder.Services.AddSingleton<DuckDbBattleRepository>();
+builder.Services.AddHostedService<BattleResultsFlushService>();
+
 var app = builder.Build();
 
 ActiveBattlesManager.Init(app.Services);
@@ -21,6 +27,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 
