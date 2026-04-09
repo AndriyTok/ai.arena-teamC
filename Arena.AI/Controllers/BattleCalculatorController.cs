@@ -2,6 +2,7 @@ using Arena.AI.Core;
 using Arena.AI.Core.Logic;
 using Arena.AI.Core.Models;
 using Arena.AI.Core.RealtimePlayers;
+using Arena.AI.QFolder;
 using Arena.AI.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
@@ -12,9 +13,9 @@ namespace Arena.AI.Controllers;
 [Route("[controller]")]
 public class BattleCalculatorController : ControllerBase
 {
-    private readonly BattleResultBuffer _buffer;
+    private readonly QBattleResultBuffer _buffer;
 
-    public BattleCalculatorController(BattleResultBuffer buffer)
+    public BattleCalculatorController(QBattleResultBuffer buffer)
     {
         _buffer = buffer;
     }
